@@ -17,4 +17,4 @@ gem 'debugger'
 gem 'rails_12factor', group: :production
 gem 'pg'
 
-ruby "2.1.1"
+ruby "2.1.3"
