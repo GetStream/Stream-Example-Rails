@@ -13,7 +13,7 @@ gem "stream-ruby", '>= 1.0.3'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'rails_layout'
-gem 'debugger'
+# gem 'debugger'
 gem 'rails_12factor', group: :production
 gem 'pg'
 
