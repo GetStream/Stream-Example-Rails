@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Streamterest</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Streamterest" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Streamterest" %>">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    <meta name="msapplication-TileColor" content="#222222">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,500' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <%= render 'layouts/navigation' %>
+    <section>
+        <article>
+          <div class="jumbotron">
+              <div class="container">
+                  <h1>Stream in action</h1>
+                  <p>
+                      Welcome to the Pinterest esque example app. We've conveniently logged you in as the admin user.
+                      Also admin is a slightly narcissistic user and follows her own account.
+                      
+                      When you pin items on this trending page, you'll see them appear in the feeds of your followers.
+                      Pin a few items and have a look at the Flat and Aggregated feed pages.
+                  </p>
+                  <p>
+                      <a class="btn btn-primary btn-lg" href="https://getstream.io" role="button">
+                          <i class="icon-help-circle"></i> GetStream
+                      </a>
+                  </p>
+              </div>
+          </div>
+            <%= render 'layouts/messages' %>
+            <%= yield %>
+        </article>
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
 </html>

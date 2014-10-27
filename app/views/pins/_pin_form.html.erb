@@ -1,0 +1,31 @@
+<% if (item.user_pin(current_user)) %>
+    <textarea class="form-control" name="message" placeholder="Comment..."></textarea>
+    <div class="media">
+        <div class="pull-left">
+            <%= button_to "Unpin", pin_path(item.user_pin(current_user)), :method => "delete", :class => "btn btn-primary btn-sm btn-danger" %>
+        </div>
+        <div class="media-body">
+            <div class="input-group input-group-sm">
+                <span class="input-group-addon text-muted">in</span>
+                <input class="form-control" name="board_name" placeholder="Board name" type="text" value="My favourite things">
+            </div>
+        </div>
+    </div>
+<% else %>
+    <%= form_for :pin, url: pins_path do |f| %>
+        <textarea class="form-control" name="message" placeholder="Comment..."></textarea>
+        <div class="media">
+            <div class="pull-left">
+                <input class="btn btn-primary btn-sm btn-danger" type="submit" value="Pin">
+            </div>
+            <div class="media-body">
+                <div class="input-group input-group-sm">
+                    <span class="input-group-addon text-muted">in</span>
+                    <input class="form-control" name="board_name" placeholder="Board name" type="text" value="My favourite things">
+                </div>
+            </div>
+        </div>
+        <%= f.hidden_field :influencer_id %>
+        <%= f.hidden_field :item_id, :value => item.id %>
+    <% end %>
+<% end %>

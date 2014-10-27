@@ -1,0 +1,20 @@
+<article class="pin">
+    <figure>
+        <div class="pin-image-holder">
+            <% if(item.image) %>
+                <%= image_tag item.image, class: "pin-image" %>
+            <% else %>
+                <%= image_tag item.item.image, class: "pin-image" %>
+            <% end %>
+        </div>
+        <% if(item.message) %>
+            <figcaption class="pin-caption">
+                <%= item.message %>
+            </figcaption>
+        <% end %>
+    </figure>
+    <%= render partial: "pins/pin_form", locals: {item: item} %>
+    <footer class="pin-attribution">
+        by <a href="{{ URL::route('profile', $item->user->username) }}"><%= item.user %></a><% if(item.created_at) %> <%= time_ago_in_words item.created_at %> ago <% end %>
+    </footer>
+</article>

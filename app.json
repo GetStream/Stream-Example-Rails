@@ -1,0 +1,19 @@
+{
+  "name": "Stream example ruby app",
+  "description": "A simple Pinterest clone built with Rails 4 and stream_rails",
+  "website": "https://getstream.io",
+  "keywords": [
+    "getstream.io",
+    "HTML5",
+    "PHP"
+  ],
+  "repository": "https://github.com/GetStream/stream-example-ruby",
+  "logo": "http://33.media.tumblr.com/avatar_be8b5eef9ae6_128.png",
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  },
+  "env": {
+    "RAILS_ENV": "production"
+  },
+  "addons": ["heroku-postgresql"]
+}

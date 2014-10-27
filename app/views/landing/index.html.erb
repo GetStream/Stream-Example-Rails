@@ -1,2 +1,7 @@
-<h1>Landing#index</h1>
-<p>Find me in app/views/landing/index.html.erb</p>
+<div class="container">
+    <div class="container-pins">
+        <% for item in @items %>
+            <%= render partial: "items/item", locals: {item: item} %>
+        <% end %>
+    </div>
+</div>

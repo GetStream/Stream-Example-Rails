@@ -1,0 +1,5 @@
+<ul>
+  <% @users.each do |user| %>
+    <%= render partial: "profile", layout: "profile_small", locals: {user: user} %>
+  <% end %>
+</ul>

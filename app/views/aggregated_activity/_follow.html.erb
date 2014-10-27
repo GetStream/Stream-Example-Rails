@@ -1,0 +1,14 @@
+<div class="aggregation media">
+    <div class="media-body">
+        <div class="media-heading">
+            <div class="aggregation-header">
+                <div class="aggregation-time pull-right">
+                    <i class="glyphicon glyphicon-time"></i> <%= time_ago_in_words(activity['updated_at']) %> ago
+                </div>
+            </div>
+        </div>
+        <% for activity in activity['activities'] %>
+            <%= render_activity activity %>
+        <% end %>
+    </div>
+</div>

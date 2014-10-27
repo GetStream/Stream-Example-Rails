@@ -5,3 +5,5 @@ coverage/
 Gemfile.lock
 gemfiles/*.lock
 .DS_Store
+.env
+log/*

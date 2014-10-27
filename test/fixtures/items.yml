@@ -1,11 +1,36 @@
-# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
-one:
-  image: MyString
-  message: MyText
-  user_id: 
-
-two:
-  image: MyString
-  message: MyText
-  user_id: 
+one: 
+    image: "items/011.jpg"
+    message: "beautiful flowers in the window"
+two: 
+    image: "items/261379381_d8fde25053fa.jpg"
+    message: ""
+three: 
+    image: "items/293704645_b4c6dab8ed99.jpg"
+    message: ""
+four: 
+    image: "items/144568575661705981_4ade117f9005.jpeg"
+    message: ""
+five: 
+    image: "items/164471358120532732_a3ae9498ad97.jpg"
+    message: ""
+six: 
+    image: "items/184290639033145973_71e492dacec6.jpeg"
+    message: ""
+seven: 
+    image: "items/272236897059737539_c4806e0b14c4.jpg"
+    message: "But I must explain to you how all this mistaken idea"
+eight:
+    image: "items/275088534757448505_4f85768f71ec.jpg"
+    message: "Lorem ipsum dolor sit amet"
+nine: 
+    image: "items/281485446934954481_c04cfc76c018.png"
+    message: "It is a long established fact that a reader will be distracted"
+ten: 
+    image: "items/389230669370236857_335b7c698687.jpg"
+    message: "Lorem Ipsum is simply dummy text"
+eleven: 
+    image: "items/1addc6292e97f5f796cf368df5d4b322.jpg"
+    message: "squirel power!"
+twelve: 
+    image: "items/6fb3f77d22ddc23305fcd1a2fd8c4e80_1.jpg"
+    message: "designed amazingness"
