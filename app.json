@@ -15,5 +15,7 @@
   "env": {
     "RAILS_ENV": "production"
   },
-  "addons": ["heroku-postgresql"]
+  "addons": [
+    "stream", "heroku-postgresql"
+  ]
 }
