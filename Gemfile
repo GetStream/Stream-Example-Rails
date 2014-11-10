@@ -9,7 +9,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'spring', group: :development
 gem "stream_rails"
-gem "stream-ruby", '>= 1.0.3'
+gem "stream-ruby", '~> 2.0'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'rails_layout'
