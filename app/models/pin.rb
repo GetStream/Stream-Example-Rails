@@ -3,8 +3,8 @@ class Pin < ActiveRecord::Base
   belongs_to :item
   belongs_to :influencer
 
-  validates :item, presence: true
-  validates :user, presence: true
+  validates :item, presence: true, :uniqueness => {:scope => :user}
+  validates :user, presence: true, :uniqueness => {:scope => :item}
 
   include StreamRails::Activity
   as_activity
