@@ -16,8 +16,4 @@ class Follow < ActiveRecord::Base
     self.target
   end
 
-  def activity_extra_data
-    {:related => StreamRails.create_reference(self)}
-  end
-
 end

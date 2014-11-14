@@ -6,6 +6,6 @@
     </figure>
     <%= render partial: "pins/pin_form", locals: {item: activity['object']} %>
     <footer class="pin-attribution">
-        by <a href="{{ URL::route('profile', $item->user->username) }}"><%= activity['actor'].email %></a><% if(activity['related'].created_at) %> <%= time_ago_in_words activity['related'].created_at %> ago <% end %>
+        by <a href="{{ URL::route('profile', $item->user->username) }}"><%= activity['actor'].email %></a><% if(activity['time']) %> <%= time_ago_in_words activity['time'] %> ago <% end %>
     </footer>
 </article>

@@ -13,8 +13,4 @@ class Pin < ActiveRecord::Base
     self.item
   end
 
-  def activity_extra_data
-    {:related => StreamRails.create_reference(self)}
-  end
-
 end
