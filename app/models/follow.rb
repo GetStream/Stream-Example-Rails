@@ -12,4 +12,12 @@ class Follow < ActiveRecord::Base
     [StreamRails.feed_manager.get_notification_feed(self.target_id)]
   end
 
+  def activity_object
+    self.target
+  end
+
+  def activity_extra_data
+    {:related => StreamRails.create_reference(self)}
+  end
+
 end

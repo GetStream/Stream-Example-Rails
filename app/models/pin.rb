@@ -8,4 +8,13 @@ class Pin < ActiveRecord::Base
 
   include StreamRails::Activity
   as_activity
+
+  def activity_object
+    self.item
+  end
+
+  def activity_extra_data
+    {:related => StreamRails.create_reference(self)}
+  end
+
 end

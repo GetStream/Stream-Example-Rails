@@ -21,7 +21,7 @@ class FeedsController < ApplicationController
   end
 
   def create_enricher
-    @enricher = StreamRails::Enrich.new
+    @enricher = StreamRails::Enrich.new([:actor, :object, :related])
   end
 
 end

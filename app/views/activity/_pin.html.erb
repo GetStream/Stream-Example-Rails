@@ -1,16 +1,11 @@
 <article class="pin">
     <figure>
         <div class="pin-image-holder">
-            <%= image_tag activity['object'].item.image, class: "pin-image" %>
+            <%= image_tag activity['object'].image, class: "pin-image" %>
         </div>
-        <% if (activity['object'].message) %>
-            <figcaption class="pin-caption">
-                <%= activity['object'].message %>
-            </figcaption>
-        <% end %>
     </figure>
-    <%= render partial: "pins/pin_form", locals: {item: activity['object'].item} %>
+    <%= render partial: "pins/pin_form", locals: {item: activity['object']} %>
     <footer class="pin-attribution">
-        by <a href="{{ URL::route('profile', $item->user->username) }}"><%= activity['object'].user.email %></a><% if(activity['object'].created_at) %> <%= time_ago_in_words activity['object'].created_at %> ago <% end %>
+        by <a href="{{ URL::route('profile', $item->user->username) }}"><%= activity['author'].email %></a><% if(activity['related'].created_at) %> <%= time_ago_in_words activity['related'].created_at %> ago <% end %>
     </footer>
 </article>
