@@ -8,7 +8,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'spring', group: :development
-gem "stream_rails", '~> 2.1'
+gem "stream_rails", '~> 2.2'
 gem 'devise'
 gem 'bootstrap-sass'
 gem 'rails_layout'
