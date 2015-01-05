@@ -2,7 +2,6 @@
 coverage/
 *.sublime-workspace
 /tmp
-Gemfile.lock
 gemfiles/*.lock
 .DS_Store
 .env
