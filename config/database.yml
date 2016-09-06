@@ -12,6 +12,9 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
 
+  # change this database name to use a different schema within your postgres setup
+  database: postgres
+
 development:
   <<: *default
 
@@ -20,6 +23,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  # database: postgres-test
 
 production:
   <<: *default
