@@ -1,4 +1,4 @@
-class CreatePins < ActiveRecord::Migration
+class CreatePins < ActiveRecord::Migration[4.2]
   def change
     create_table :pins do |t|
       t.references :user, index: true

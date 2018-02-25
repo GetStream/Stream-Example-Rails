@@ -1,7 +1,7 @@
-class AddDemoUsers < ActiveRecord::Migration
+class AddDemoUsers < ActiveRecord::Migration[4.2]
   def change
     require 'active_record/fixtures'
-    ActiveRecord::Fixtures.create_fixtures(Rails.root.join('test/fixtures'), 
+    ActiveRecord::FixtureSet.create_fixtures(Rails.root.join('test/fixtures'), 
                                            'items')
     user = User.find_or_create_by!(email: Rails.application.secrets.admin_email) do |user|
         user.name = Rails.application.secrets.admin_name
