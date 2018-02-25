@@ -7,7 +7,7 @@ If you have no idea what GetStream is: GetStream is an hosted API service that a
 user activity feeds, public feeds, aggregated feeds and notification feeds. GetStream provides API clients in several language, in this example app we show how easy
 is to create a website with activity feeds using Rails and [stream_rails](https://github.com/GetStream/Stream-Rails "stream_rails").
 
-The application is built using Rails 4; and stream_rails the best way to try this application is via Heroku; you can deploy this example (for free) on Heroku
+The application is built using Rails 5; and stream_rails the best way to try this application is via Heroku; you can deploy this example (for free) on Heroku
 by pressing the Deploy button below.
 
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
