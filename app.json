@@ -1,6 +1,6 @@
 {
   "name": "Stream example ruby app",
-  "description": "A simple Pinterest clone built with Rails 4 and stream_rails",
+  "description": "A simple Pinterest clone built with Rails 5 and stream_rails",
   "website": "https://getstream.io",
   "keywords": [
     "getstream.io",
