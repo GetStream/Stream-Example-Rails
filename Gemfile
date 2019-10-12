@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '6.0.0'
+gem 'rails', '5.2.2'
 gem 'sass-rails', '~> 5.0.7'
 gem 'turbolinks'
 gem 'coffee-rails'
